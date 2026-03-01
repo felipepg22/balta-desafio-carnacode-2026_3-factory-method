@@ -1,4 +1,4 @@
-﻿namespace FactoryMethod;
+﻿namespace FactoryMethod.Notifications;
 
 public class EmailNotification : INotification
 {
