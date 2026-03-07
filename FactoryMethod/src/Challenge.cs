@@ -5,6 +5,7 @@
 
 using System;
 using FactoryMethod.NotificationCreators;
+using FactoryMethod.Notifications.Enums;
 
 namespace DesignPatternChallenge
 {
@@ -13,21 +14,21 @@ namespace DesignPatternChallenge
     
     public class NotificationManager
     {
-        public void SendOrderConfirmation(string recipient, string orderNumber, string notificationType)
+        public void SendOrderConfirmation(string recipient, string orderNumber, NotificationType notificationType)
         {
             NotificationCreatorFactory
                 .GetCreator(notificationType, recipient, "Confirmação de Pedido", $"Seu pedido {orderNumber} foi confirmado!")
                 .Notify();
         }
 
-        public void SendShippingUpdate(string recipient, string trackingCode, string notificationType)
+        public void SendShippingUpdate(string recipient, string trackingCode, NotificationType notificationType)
         {
             NotificationCreatorFactory
                 .GetCreator(notificationType, recipient, "Pedido Enviado", $"Pedido enviado! Rastreamento: {trackingCode}")
                 .Notify();
         }
 
-        public void SendPaymentReminder(string recipient, decimal amount, string notificationType)
+        public void SendPaymentReminder(string recipient, decimal amount, NotificationType notificationType)
         {
             NotificationCreatorFactory
                 .GetCreator(notificationType, recipient, "Lembrete de Pagamento", $"Você tem um pagamento pendente de R$ {amount:N2}")
@@ -44,19 +45,19 @@ namespace DesignPatternChallenge
             var manager = new NotificationManager();
 
             // Cliente 1 prefere Email
-            manager.SendOrderConfirmation("cliente@email.com", "12345", "email");
+            manager.SendOrderConfirmation("cliente@email.com", "12345", NotificationType.Email);
             Console.WriteLine();
 
             // Cliente 2 prefere SMS
-            manager.SendOrderConfirmation("+5511999999999", "12346", "sms");
+            manager.SendOrderConfirmation("+5511999999999", "12346", NotificationType.Sms);
             Console.WriteLine();
 
             // Cliente 3 prefere Push
-            manager.SendShippingUpdate("device-token-abc123", "BR123456789", "push");
+            manager.SendShippingUpdate("device-token-abc123", "BR123456789", NotificationType.Push);
             Console.WriteLine();
 
             // Cliente 4 prefere WhatsApp
-            manager.SendPaymentReminder("+5511888888888", 150.00m, "whatsapp");
+            manager.SendPaymentReminder("+5511888888888", 150.00m, NotificationType.WhatsApp);
 
             // Perguntas para reflexão:
             // - Como adicionar novos tipos de notificação (Telegram, Slack) sem modificar NotificationManager?

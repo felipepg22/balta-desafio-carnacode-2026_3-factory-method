@@ -1,22 +1,24 @@
+using FactoryMethod.Notifications.Enums;
+
 namespace FactoryMethod.NotificationCreators;
 
 public static class NotificationCreatorFactory
 {
     public static NotificationCreator GetCreator(
-        string notificationType,
+        NotificationType notificationType,
         string recipient,
         string subject,
         string message,
         bool isHtml = true,
         bool useTemplate = true)
     {
-        return notificationType.ToLower() switch
+        return notificationType switch
         {
-            "email"     => new EmailNotificationCreator(recipient, subject, message, isHtml: isHtml),
-            "sms"       => new SmsNotificationCreator(recipient, message),
-            "push"      => new PushNotificationCreator(recipient, subject, message, badge: 1),
-            "whatsapp"  => new WhatsAppNotificationCreator(recipient, message, useTemplate: useTemplate),
-            _           => throw new ArgumentException($"Tipo de notificação '{notificationType}' não suportado")
+            NotificationType.Email    => new EmailNotificationCreator(recipient, subject, message, isHtml: isHtml),
+            NotificationType.Sms      => new SmsNotificationCreator(recipient, message),
+            NotificationType.Push     => new PushNotificationCreator(recipient, subject, message, badge: 1),
+            NotificationType.WhatsApp => new WhatsAppNotificationCreator(recipient, message, useTemplate: useTemplate),
+            _                         => throw new ArgumentException($"Tipo de notificação '{notificationType}' não suportado")
         };
     }
 }
