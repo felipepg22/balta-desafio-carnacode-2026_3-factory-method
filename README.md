@@ -1,28 +1,25 @@
 ![CR-3](https://github.com/user-attachments/assets/485b7ff1-c098-40bf-93b4-00058c8729a9)
 
-## 🥁 CarnaCode 2026 - Desafio 03 - Factory Method
+## 🥁 CarnaCode 2026 - Challenge 03 - Factory Method
 
-Oi, eu sou o [seu nome aqui] e este é o espaço onde compartilho minha jornada de aprendizado durante o desafio **CarnaCode 2026**, realizado pelo [balta.io](https://balta.io). 👻
+Hi, I'm Felipe Parizzi Galli and this is the space where I share my learning journey during the **CarnaCode 2026** challenge, hosted by [balta.io](https://balta.io). 👻
 
-Aqui você vai encontrar projetos, exercícios e códigos que estou desenvolvendo durante o desafio. O objetivo é colocar a mão na massa, testar ideias e registrar minha evolução no mundo da tecnologia.
+Here you'll find projects, exercises and code I'm developing throughout the challenge. The goal is to get hands-on, test ideas and track my growth in the world of technology.
 
-### Sobre este desafio
-No desafio **Factory Method** eu tive que resolver um problema real implementando o **Design Pattern** em questão.
-Neste processo eu aprendi:
-* ✅ Boas Práticas de Software
-* ✅ Código Limpo
+### About this challenge
+In the **Factory Method** challenge I had to solve a real-world problem by implementing the **Design Pattern** in question.
+Throughout this process I learned:
+* ✅ Software Best Practices
+* ✅ Clean Code
 * ✅ SOLID
-* ✅ Design Patterns (Padrões de Projeto)
+* ✅ Design Patterns
 
-## Problema
-Uma aplicação de e-commerce precisa enviar notificações por diferentes canais (Email, SMS, Push, WhatsApp) dependendo da preferência do cliente e tipo de notificação.
-O código atual viola o Open/Closed Principle ao usar condicionais para criar notificações.
+## Problem
+An e-commerce application needs to send notifications through different channels (Email, SMS, Push, WhatsApp) depending on the customer's preference and notification type.
+The existing code violates the Open/Closed Principle by using conditionals to create notifications.
 
-## Sobre o CarnaCode 2026
-O desafio **CarnaCode 2026** consiste em implementar todos os 23 padrões de projeto (Design Patterns) em cenários reais. Durante os 23 desafios desta jornada, os participantes são submetidos ao aprendizado e prática na idetinficação de códigos não escaláveis e na solução de problemas utilizando padrões de mercado.
+## About CarnaCode 2026
+The **CarnaCode 2026** challenge consists of implementing all 23 design patterns in real-world scenarios. Across the 23 challenges of this journey, participants practice identifying non-scalable code and solving problems using industry-standard patterns.
 
-### eBook - Fundamentos dos Design Patterns
-Minha principal fonte de conhecimento durante o desafio foi o eBook gratuito [Fundamentos dos Design Patterns](https://lp.balta.io/ebook-fundamentos-design-patterns).
-
-### Veja meu progresso no desafio
-[Incluir link para o repositório central]
+### eBook - Design Patterns Fundamentals
+My main source of knowledge throughout the challenge was the free eBook [Design Patterns Fundamentals](https://lp.balta.io/ebook-fundamentos-design-patterns). 
